@@ -1,0 +1,26 @@
+ALGORITHM algoprocedure
+VAR
+    vec1,vec2 : ARRAY_OF INTEGER[50];
+    sum:INTEGER:=0;
+BEGIN
+
+   proVecProduit(vec1,vec2,sum)
+    IF (sum=0) THEN
+                  write ("vecteurs orth")
+
+    ELSE
+                 write("vecteurs non orth")
+
+    END_IF
+END
+
+
+
+PROCEDURE proVecProduit(VAR sum ,vec1,vec2:ARRAY_OF INTEGER)
+    VAR
+        i:INTEGER
+    BEGIN
+                 FOR i FROM 0 TO vec1.length STEP 1  DO
+                      sum=sum+(vec1[i]*vec2[i])
+                 END_FOR
+
